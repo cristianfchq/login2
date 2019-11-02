@@ -1,7 +1,6 @@
 //import 'package:AeologicSplashDemo/Constant/Constant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:login2/Constant/Constant.dart';
 
 class detailLitografia extends StatelessWidget {
   detailLitografia(this.userName);

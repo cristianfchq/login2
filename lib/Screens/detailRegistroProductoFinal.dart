@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:login2/Constant/Constant.dart';
 
 class detailRegistroProductoFinal extends StatelessWidget {
   detailRegistroProductoFinal(this.userName);

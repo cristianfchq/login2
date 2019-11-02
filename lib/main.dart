@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'Constant/Constant.dart';
 import 'Screens/ButtonScreen.dart';
 //import 'Screens/SignUpScreen.dart';
-import 'Screens/SplashScreen.dart';
+//import 'Screens/SplashScreen.dart';
 //import 'package:shared_preferences/shared_preferences.dart';
 
 
@@ -18,11 +16,11 @@ main() {
         primaryColorDark: Colors.black
 
     ),
-    home: new SplashScreen(),
-    routes: <String, WidgetBuilder>{
-      LOGIN_SCREEN: (BuildContext context) => new ButtOnScreen(),
-      ANIMATED_SPLASH: (BuildContext context) => new SplashScreen()
-    },
+    home: new ButtOnScreen(),
+//    routes: <String, WidgetBuilder>{
+//      LOGIN_SCREEN: (BuildContext context) => new ButtOnScreen(),
+//      //ANIMATED_SPLASH: (BuildContext context) => new SplashScreen()
+//    },
   ));
 }
 
