@@ -1,10 +1,10 @@
 //import 'package:AeologicSplashDemo/Constant/Constant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:login2/Constant/Constant.dart';
+//import 'package:login2/Constant/Constant.dart';
 
-class detailProduccion extends StatelessWidget {
-  detailProduccion(this.userName);
+class detailTijeras extends StatelessWidget {
+  detailTijeras(this.userName);
 
   String userName;
 
@@ -14,7 +14,7 @@ class detailProduccion extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: true,
         backgroundColor: Color(0xFF54C5F8),
-        title: new Text("PRODUCCION"),
+        title: new Text(userName),
       ),
       body: new Stack(
         fit: StackFit.expand,
@@ -55,7 +55,7 @@ class detailProduccion extends StatelessWidget {
                             fontSize: 18.0,
                           ),
                         ),
-                        Text("Widget para PRODUCCION"),
+                        Text("Widget para " + userName),
                       ],
                     ),
 

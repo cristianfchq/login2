@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:login2/Constant/Constant.dart';
 
-class detailInventario extends StatelessWidget {
-  detailInventario(this.userName);
+class detailTroqueladora extends StatelessWidget {
+  detailTroqueladora(this.userName);
 
   String userName;
 
@@ -14,7 +14,7 @@ class detailInventario extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: true,
         backgroundColor: Color(0xFF54C5F8),
-        title: new Text("INVENTARIO"),
+        title: new Text(userName),
       ),
       body: new Stack(
         fit: StackFit.expand,
@@ -55,7 +55,7 @@ class detailInventario extends StatelessWidget {
                             fontSize: 18.0,
                           ),
                         ),
-                        Text("Widget para INVENTARIO"),
+                        Text("Widget para " + userName),
                       ],
                     ),
 

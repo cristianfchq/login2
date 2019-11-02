@@ -4,13 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 //import 'package:flutter/material.dart';
-import 'package:login2/Constant/Constant.dart';
-import 'package:login2/Screens/detailGerente.dart';
+//import 'package:login2/Constant/Constant.dart';
+import 'package:login2/Screens/detailEnsamblaje.dart';
+//import 'package:login2/Screens/detailGerente.dart';
+import 'package:login2/Screens/detailLitografia.dart';
+import 'package:login2/Screens/detailRegistroProductoFinal.dart';
+import 'package:login2/Screens/detailTijeras.dart';
+import 'package:login2/Screens/detailTroqueladora.dart';
 
 //import 'HomeScreen.dart';
-import 'detail_inventario.dart';
-import 'detail_produccion.dart';
-import 'detail_ventas.dart';
+//import 'detail_produccion.dart';
+//import 'detail_ventas.dart';
 
 class LogInScreen extends StatefulWidget {
   final String _nombre;
@@ -133,23 +137,23 @@ class LogInScreenState extends State<LogInScreen>
                                     onChanged: (text) {
                                       _contr = text;
                                       print(_contr);
+                                      print(widget._nombre);
                                     },
                                     keyboardType: TextInputType.text,
                                   ),
                                 ),
-
                                 new Padding(
                                   padding: EdgeInsets.only(
                                       left: 0.0, top: 20.0, bottom: 0.0),
                                   child: new RaisedButton(
                                     shape: new RoundedRectangleBorder(
                                         borderRadius:
-                                        new BorderRadius.circular(30.0)),
+                                            new BorderRadius.circular(30.0)),
                                     onPressed: () {
                                       if (!(password_controller.value.text
-                                          .trim()
-                                          .toString()
-                                          .length >
+                                              .trim()
+                                              .toString()
+                                              .length >
                                           1)) {
                                         Fluttertoast.showToast(
                                             msg: "Ingrese la contraseña.",
@@ -157,8 +161,6 @@ class LogInScreenState extends State<LogInScreen>
                                             gravity: ToastGravity.CENTER,
                                             timeInSecForIos: 1);
                                       } else {
-
-
                                         /* Fluttertoast.showToast(
                                               msg:
                                               "You have successfull logedin to " +
@@ -177,14 +179,14 @@ class LogInScreenState extends State<LogInScreen>
 //                                        //  Navigator.of(context).pop(LOGIN_SCREEN);
 //                                          Navigator.pushReplacement(context, root);
 
-                                        if (widget._nombre == "INVENTARIO" &&
-                                            _contr == "inventario") {
+                                        if (widget._nombre == "LITOGRAFIA" &&
+                                            _contr == "11111") {
                                           Navigator.push(
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    detailInventario(widget._nombre)
-                                            ),
+                                                    detailLitografia(
+                                                        widget._nombre)),
                                           );
                                         }
 //                                          else {
@@ -200,52 +202,63 @@ class LogInScreenState extends State<LogInScreen>
 //                                            }
 //                                          }
                                         else {
-                                          if (widget._nombre == "PRODUCCION" &&
-                                              _contr == "produccion") {
+                                          if (widget._nombre == "TIJERAS" &&
+                                              _contr == "22222") {
                                             Navigator.push(
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      detailProduccion(
-                                                          widget._nombre)
-                                              ),
+                                                      detailTijeras(
+                                                          widget._nombre)),
                                             );
-                                          }
-                                          else {
-                                            if (widget._nombre == "VENTAS" &&
-                                                _contr == "ventas") {
+                                          } else {
+                                            if (widget._nombre ==
+                                                    "TROQUELADORA" &&
+                                                _contr == "33333") {
                                               Navigator.push(
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        detailVentas(widget._nombre)
-                                                ),
+                                                        detailTroqueladora(
+                                                            widget._nombre)),
                                               );
-                                            }
-                                            else
-                                              if(widget._nombre == "GERENTE" &&
-                                                  _contr == "gerente"){
+                                            } else {
+                                              if (widget._nombre ==
+                                                      "ENSAMBLAJE" &&
+                                                  _contr == "44444") {
                                                 Navigator.push(
                                                   context,
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          detailGerente(widget._nombre)
-                                                  ),
+                                                          detailEnsamblaje(
+                                                              widget._nombre)),
                                                 );
+                                              } else {
+                                                if (widget._nombre ==
+                                                        "REGISTRO DE PRODUCTO FINAL" &&
+                                                    _contr == "55555") {
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            detailRegistroProductoFinal(widget
+                                                                ._nombre)),
+                                                  );
+                                                } else {
+                                                  Fluttertoast.showToast(
+                                                      msg:
+                                                          "No existe ese usuario",
+                                                      toastLength:
+                                                          Toast.LENGTH_SHORT,
+                                                      gravity:
+                                                          ToastGravity.CENTER,
+                                                      timeInSecForIos: 1);
+                                                }
                                               }
-                                              else{
-                                              Fluttertoast.showToast(
-                                                  msg: "No existe ese usuario",
-                                                  toastLength: Toast
-                                                      .LENGTH_SHORT,
-                                                  gravity: ToastGravity
-                                                      .CENTER,
-                                                  timeInSecForIos: 1);
                                             }
                                           }
                                         }
                                       }
-
                                     },
                                     child: new Text(
                                       "Ingresar",

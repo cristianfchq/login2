@@ -6,9 +6,9 @@ import 'package:login2/Constant/Constant.dart';
 import 'package:login2/Screens/LoginScreen.dart';
 
 //import 'HomeScreen.dart';
-import 'detail_inventario.dart';
-import 'detail_produccion.dart';
-import 'detail_ventas.dart';
+//import 'detail_inventario.dart';
+//import 'detail_produccion.dart';
+//import 'detail_ventas.dart';
 
 class ButtOnScreen extends StatefulWidget {
   @override
@@ -100,21 +100,22 @@ class ButtOnScreenState extends State<ButtOnScreen>
                                       Navigator.of(context).push(
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              LogInScreen('INVENTARIO'),
+                                              LogInScreen('LITOGRAFIA'),
                                         ),
                                       );
                                     },
                                     child: new Text(
-                                      "INVENTARIO",
+                                      "LITOGRAFIA",
+                                      textAlign: TextAlign.center,
                                       style: new TextStyle(
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,),
                                     ),
                                     color: Color(0xFFf2a65a),
                                     textColor: Colors.white,
                                     elevation: 5.0,
                                     padding: EdgeInsets.only(
-                                        left: 80.0,
-                                        right: 80.0,
+                                        left: 111.0,
+                                        right: 111.0,
                                         top: 15.0,
                                         bottom: 15.0),
                                   ),
@@ -130,21 +131,22 @@ class ButtOnScreenState extends State<ButtOnScreen>
                                       Navigator.of(context).push(
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              LogInScreen('PRODUCCION'),
+                                              LogInScreen('TIJERAS'),
                                         ),
                                       );
                                     },
                                     child: new Text(
-                                      "PRODUCCION",
+                                      "TIJERAS",
+                                      textAlign: TextAlign.center,
                                       style: new TextStyle(
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,),
                                     ),
                                     color: Color(0xFFf2a65a),
                                     textColor: Colors.white,
                                     elevation: 5.0,
                                     padding: EdgeInsets.only(
-                                        left: 80.0,
-                                        right: 80.0,
+                                        left: 122.0,
+                                        right: 122.0,
                                         top: 15.0,
                                         bottom: 15.0),
                                   ),
@@ -160,21 +162,22 @@ class ButtOnScreenState extends State<ButtOnScreen>
                                       Navigator.of(context).push(
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              LogInScreen('VENTAS'),
+                                              LogInScreen('TROQUELADORA'),
                                         ),
                                       );
                                     },
                                     child: new Text(
-                                      "VENTAS",
+                                      "TROQUELADORA",
+                                      textAlign: TextAlign.center,
                                       style: new TextStyle(
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,),
                                     ),
                                     color: Color(0xFFf2a65a),
                                     textColor: Colors.white,
                                     elevation: 5.0,
                                     padding: EdgeInsets.only(
-                                        left: 95.0,
-                                        right: 95.0,
+                                        left: 96.0,
+                                        right: 96.0,
                                         top: 15.0,
                                         bottom: 15.0),
                                   ),
@@ -190,24 +193,63 @@ class ButtOnScreenState extends State<ButtOnScreen>
                                       Navigator.of(context).push(
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              LogInScreen('GERENTE'),
+                                              LogInScreen('ENSAMBLAJE'),
                                         ),
                                       );
                                     },
                                     child: new Text(
-                                      "GERENTE",
+                                      "ENSAMBLAJE",
+                                      textAlign: TextAlign.center,
                                       style: new TextStyle(
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,),
                                     ),
                                     color: Color(0xFFf2a65a),
                                     textColor: Colors.white,
                                     elevation: 5.0,
                                     padding: EdgeInsets.only(
-                                        left: 90.0,
-                                        right: 90.0,
+                                        left: 105.0,
+                                        right: 105.0,
                                         top: 15.0,
                                         bottom: 15.0),
                                   ),
+                                ),
+                                new Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 0.0, top: 20.0, bottom: 0.0),
+                                  child: new RaisedButton(
+                                    shape: new RoundedRectangleBorder(
+                                        borderRadius:
+                                            new BorderRadius.circular(30.0)),
+                                    onPressed: () {
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (context) => LogInScreen(
+                                              'REGISTRO DE PRODUCTO FINAL'),
+                                        ),
+                                      );
+                                    },
+                                    child: new Text(
+                                      "REGISTRO DE PRODUCTO FINAL",
+                                      textAlign: TextAlign.center,
+                                      style: new TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    color: Color(0xFFf2a65a),
+                                    textColor: Colors.white,
+                                    elevation: 5.0,
+                                    padding: EdgeInsets.only(
+                                        left: 47.0,
+                                        right: 47.0,
+                                        top: 15.0,
+                                        bottom: 15.0),
+                                  ),
+                                ),
+
+                                new Padding(
+                                  padding: EdgeInsets.only(
+                                      left: 0.0, top: 30.0, bottom: 0.0),
+
                                 ),
                               ],
                             ),

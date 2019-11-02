@@ -1,9 +1,10 @@
+//import 'package:AeologicSplashDemo/Constant/Constant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:login2/Constant/Constant.dart';
 
-class detailGerente extends StatelessWidget {
-  detailGerente(this.userName);
+class detailLitografia extends StatelessWidget {
+  detailLitografia(this.userName);
 
   String userName;
 
@@ -13,7 +14,7 @@ class detailGerente extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: true,
         backgroundColor: Color(0xFF54C5F8),
-        title: new Text("GERENTE"),
+        title: new Text(userName),
       ),
       body: new Stack(
         fit: StackFit.expand,
@@ -48,13 +49,13 @@ class detailGerente extends StatelessWidget {
                     Column(
                       children: <Widget>[
                         Text(
-                          userName + '\n',
+                          userName,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18.0,
                           ),
                         ),
-                        Text("Widget para GERENTE"),
+                        Text("Widget para " + userName),
                       ],
                     ),
 
